@@ -1,0 +1,8 @@
+<!-- Template.postList (posts) > Template.postItem (url, title, domain) -->
+<template name="postsList">
+	<div class="posts">
+		{{#each posts}}
+			{{> postItem}}
+		{{/each}}
+	</div>
+</template>
