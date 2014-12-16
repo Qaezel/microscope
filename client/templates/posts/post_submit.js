@@ -1,13 +1,13 @@
 Template.postSubmit.events({
-	'submit form': function (evn) {
-		e.preventDefault();
+  'submit form': function(e) {
+    e.preventDefault();
 
-		var post = {
-			url: $(evn.target).find('[name=url]'.val()),
-			title: $(evn.target).find('[name=title]').val()
-		};
+    var post = {
+      url: $(e.target).find('[name=url]').val(),
+      title: $(e.target).find('[name=title]').val()
+    };
 
-		post_id = Post.insert(post);
-		Router.go('postPage', post);
-	}
+    post._id = Posts.insert(post);
+    Router.go('postPage', post);
+  }
 });
