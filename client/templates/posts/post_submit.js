@@ -8,11 +8,11 @@ Template.postSubmit.events({
     };
 
     Meteor.call('postInsert', post, function (error, result) {
-    	if (error) {
-    		return alert(error.reason);
-    	} else {
-    		Router.go('postPage', {_id: result._id});
-    	}
+    	if (error) return alert(error.reason);
+    	if (result.postExit) alert('This link has already been posted');
+
+    	Router.go('postPage', {_id: result._id});
+    	
     });
   }
 });
