@@ -1,3 +1,17 @@
 <template name="postPage">
 	{{> postItem}}
+	<ul class="comments">
+		{{#each comments}}
+			{{> commentItem}}
+		{{/each}}
+	</ul>
+</template>
+
+<template name="commentItem">
+	<li>
+		<h4>
+			<span class="author">{{author}}</span>
+			<span class="date">{{submittedText}}</span>
+		</h4>
+	</li>
 </template>
