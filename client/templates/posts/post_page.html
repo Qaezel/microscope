@@ -5,6 +5,13 @@
 			{{> commentItem}}
 		{{/each}}
 	</ul>
+
+	{{# if currentUser}}
+		{{> commentSubmit}}
+	{{else}}
+		<p>Please log in to leave a comment.</p>
+	{{/if}}
+	
 </template>
 
 <template name="commentItem">
