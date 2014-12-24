@@ -65,5 +65,6 @@ if (Posts.find().count() === 0) {
       commmentCounts: 0
     });
   }
+  Accounts.createUser({username: 'Jeremy', password: 'badass'});
 
 }
